@@ -1,0 +1,17 @@
+:root{
+--backgroundColor : '#212121';
+--color : #000000
+}
+[theme = "dark"]{
+  --backgroundColor : '#212121';
+  --color : #ffffff
+}
+
+body{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  /* background-color: var(--backgroundColor);
+  color: var(--color); */
+  
+}

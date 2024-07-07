@@ -1,0 +1,505 @@
+// @import './fontStyle.scss';
+
+:root {
+    --bgColor: rgb(228, 228, 228);
+    --bglight : #dad9d9;
+    --color: #000000;
+    --red: #ff084a;
+    --white: #ffffff;
+    --black: #000000;
+
+}
+
+[theme="dark"] {
+    --bgColor: #212121;
+    --color: #fff;
+    
+    --bglight : #353434;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    // background-color: var(--backgroundColor);
+    color: var(--color);
+    background-color: var(--bgColor);
+
+}
+
+// font size 
+
+.fs-xss {
+    font-size: .5rem;
+}
+
+.fs-smm {
+    font-size: .8rem;
+}
+
+.fs-mdd {
+    font-size: 1rem;
+}
+
+.fs-lgg {
+    font-size: 1.5rem;
+}
+
+.fs-xll {
+    font-size: 2rem;
+}
+
+.fs-xxl {
+    font-size: 3rem;
+}
+
+// font weight
+.fw-300 {
+    font-weight: 300;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.fw-800 {
+    font-weight: 800;
+}
+
+// color
+.white {
+    color: white;
+
+}
+
+.red {
+    color: var(--red);
+}
+
+// background color
+.bg-red {
+    background-color: var(--red);
+}
+
+.bg-white {
+    background-color: var(--white);
+}
+
+.bg-black {
+    background-color: var(--black);
+}
+
+// main-btn
+.main-btn {
+    width: 180px;
+    height: 50px;
+    border: none;
+    transition: all .3s ease-in-out;
+}
+
+.main-btn:hover {
+    border: 2px solid var(--red);
+    background: transparent;
+}
+
+.main-btn-outlined {
+    width: 180px;
+    height: 50px;
+    border: none;
+    background: transparent;
+    border: 2px solid var(--red);
+    transition: all .3s ease-in-out;
+}
+
+.main-btn-outlined:hover {
+
+    border: none;
+    background-color: var(--red);
+    // border: 2px solid var(--red);
+}
+
+.LinkHeading {
+    text-decoration: none;
+    color: var(--color);
+}
+
+// common css
+.cur-pointer {
+    cursor: pointer;
+}
+
+.txt-center {
+    text-align: center;
+}
+
+.capitalize{
+    text-transform: capitalize;
+}
+
+// component css
+
+.header {
+    // position: fixed;
+    // top: 6px;
+    // left: 0px;
+    // width: 100%;
+
+    // background-color: var(--bgColor);
+    // z-index: 100000;
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    button {
+        border: none;
+        background-color: var(--bgColor);
+        color: var(--color);
+    }
+
+
+    .navList {
+        list-style-type: none;
+    }
+
+    .navbar {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+}
+
+
+
+/// about parent page 
+
+.aboutParent {
+    background-image: url('../../public/tableThree.jpg');
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+
+}
+
+.subParent {
+    background-color: rgba(0, 0, 0, 0.696);
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.aboutContent {
+    width: 100%;
+    height: 100%;
+}
+
+.subHeading {
+    margin-top: -10px !important;
+
+}
+
+// bio
+.bioContainer {
+    width: 100%;
+    height: 100vh;
+    min-height: min-content;
+}
+
+.sectionHeading {
+    width: max-content;
+    padding: 5px;
+    border-bottom: 5px solid var(--red);
+    margin-bottom: 40px;
+
+}
+
+
+
+
+
+
+
+// project section
+.projectSection {
+    width: 100vw;
+    // height: 100vh;
+    box-sizing: border-box;
+}
+
+.tabContainer {
+    gap: 12px 20px;
+}
+
+
+// projectCard
+
+.projectCard {
+    width: max-content;
+    height: 400px;
+    min-width: 350px;
+    max-width: 350px;
+
+    background-size: cover;
+    background-position: top;
+
+    border-radius: 10px;
+}
+
+.projectCard:hover {
+    background-position: bottom;
+}
+
+.subProjectCard {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background-color: #212121b2;
+    transition: .4s ease;
+}
+
+.subProjectCard:hover {
+
+    background-color: #ffffff00;
+}
+
+.projectCardImage-1 {
+    background-image: url('../../public/webImage.png');
+    transition: 25s ease;
+
+}
+
+.projectCardImage-2 {
+    background-image: url('../../public/broker.png');
+    transition: 25s ease;
+
+}
+
+.projectCardImage-3 {
+    background-image: url('../../public/shadi.png');
+    transition: 25s ease;
+
+}
+
+.aboutProject {
+    margin: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 94%;
+    background-color: #000000c1;
+
+    // opacity: .5;
+    * {
+        padding: 0px;
+        margin: 0px;
+
+    }
+
+    .name {
+        color: white;
+    }
+
+    .button {
+        margin: 10px 0px;
+        border: none;
+        padding: 5px 15px;
+        border-radius: 5px;
+        font-size: larger;
+        font-weight: 500;
+        background-color: var(--bgColor);
+        color: var(--color);
+        border: 1px solid var(--red);
+    }
+
+}
+
+.aboutProject:hover {
+    background-color: #000000c1;
+}
+
+
+
+
+// tab
+.tab {
+    box-sizing: border-box;
+    color: var(--color);
+    background-color: transparent;
+    border: 2px solid var(--color);
+    font-size: 1.2rem;
+    padding: 5px 20px;
+    border-radius: 10px;
+    font-weight: 500;
+
+   
+}
+
+.activeTab {
+    border: 2px solid var(--red);
+   
+}
+
+
+
+// skills
+.skillsContainer {
+    width: 100%;
+    height: max-content;
+    // min-height: 80vh;
+    background-color: var(--bglight);
+    margin-top: 100px;
+    border-radius: 5px;
+}
+
+.skillCardContainer {
+    width: 100%;
+    position: relative;
+    top: -50px;
+}
+
+.skillCard {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5px;
+    min-width: 270px;
+    max-width: 100px;
+    min-height: 200px;
+    width: 250px;
+    height: 100px;
+    background-color: var(--bgColor);
+    .icon{
+     font-size: 5rem;
+     border: 1px solid var(--color);
+     padding: 10px;
+     border-radius: 50%;
+     transition: all .2s ease;
+    }
+    .icon:hover{
+        // font-size: 5.5rem;
+        scale: 1.1;
+    }
+    .heading{
+        padding: 0px;
+        margin: 0px;
+        font-size:1.5rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 500;
+    }
+    .experience{
+        padding: 0px;
+        margin: 0px;
+    }
+   
+}
+
+.showMoreButton{
+    width: 180px;
+    padding: 8px;
+    background-color: var(--red);
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+    border: none;
+
+    
+    cursor: pointer;
+    
+
+}
+
+
+// experience 
+
+.exTextContainer{
+    width: fit-content;
+    max-width: 550px;
+}
+.border-bottom{
+  border: 2px solid green;
+}
+
+// footer 
+.nm-1{
+    margin-top: -10px;
+}
+.nm-3{
+    margin-top: -25px;
+}
+.footerIconConatiner{
+    width: 50px;
+    height: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all .5s ease;
+    cursor: pointer;
+    border: none;
+
+   
+}
+.footerIconConatiner:hover{
+    color: var(--red);
+}
+
+
+/// conatct page 
+
+.contactMessage{
+    width: 100%;
+    height: 70vh;
+}
+
+
+.checkCircle{
+    width: 200px;
+    height: 200px;
+    // border: 2px solid white;
+    border-radius: 50%;
+    font-size: 5rem;
+    animation: circleFormAnimation 3s 1 ease forwards;
+}
+
+@keyframes circleFormAnimation {
+    0%{
+        border: none;
+    }
+    25%{
+        border-left: 2px solid var(--red);
+    }
+    50%{
+        border-left: 2px solid var(--red);
+        border-bottom: 2px solid var(--red);
+    }
+    75%{
+        border-left: 2px solid var(--red);
+        border-bottom: 2px solid var(--red);
+        border-right: 2px solid var(--red);
+    }
+    100%{
+        border-left: 2px solid var(--red);
+        border-bottom: 2px solid var(--red);
+        border-right: 2px solid var(--red);
+        border-top: 2px solid var(--red);
+    }
+    
+}
+
+
+.closeButton{
+    background-color: transparent;
+    color: var(--red);
+}
