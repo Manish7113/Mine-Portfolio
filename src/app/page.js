@@ -28,7 +28,7 @@ export default function Home() {
         <About></About>
         <Bio></Bio>
         <Skill></Skill>
-        {/* <Project></Project> */}
+        <Project></Project> 
         <Experience></Experience>
 
         <Contact></Contact>

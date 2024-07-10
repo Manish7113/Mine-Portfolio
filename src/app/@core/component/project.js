@@ -2,8 +2,13 @@
 
 import { useState } from 'react'
 import { ProjectCardOne, ProjectCardTwo, ProjectCardThree } from '../subComponent/projectCard'
+import ProjectCardTwoMain from '../subComponent/projectCardTwo'
+
+import { useRouter } from 'next/navigation'
 
 export default function Project() {
+    const router = useRouter()
+
 
 
     const [activeTab, setActiveTab]= useState('html')
@@ -42,10 +47,19 @@ export default function Project() {
 
             </div>
             <div className='d-flex justify-content-center align-items-center flex-wrap gap-3'>
-                <ProjectCardOne></ProjectCardOne>
+                <ProjectCardTwoMain></ProjectCardTwoMain>
+                <ProjectCardTwoMain></ProjectCardTwoMain>
+                <ProjectCardTwoMain></ProjectCardTwoMain>
+                {/* <ProjectCardOne></ProjectCardOne>
                 <ProjectCardTwo></ProjectCardTwo>
-                <ProjectCardThree></ProjectCardThree>
+                <ProjectCardThree></ProjectCardThree> */}
             </div>
+
+            <div className="container pb-3 d-flex justify-content-center align-items-center pt-5">
+                    <button className="showMoreButton" onClick={()=>{
+                        router.push('/[radhe]')
+                    }} >View More</button>
+                </div>
 
 
 
