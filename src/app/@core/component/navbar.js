@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 // import AnalogClock from 'analog-clock-react';
+import AnalogClock from 'analog-clock-react';
 
 
 export default function Navbar() {
@@ -36,19 +37,25 @@ export default function Navbar() {
         setShowSideBar(false)
     }
 
+   
+
+
     let options = {
-        width: "300px",
-        border: true,
-        borderColor: "#2e2e2e",
-        baseColor: "#17a2b8",
-        centerColor: "#459cff",
-        centerBorderColor: "#ffffff",
-        handColors: {
-          second: "#d81c7a",
-          minute: "#ffffff",
-          hour: "#ffffff"
-        }
-    };
+        
+            useCustomTime: false,
+            width: "100px",
+            border: true,
+            borderColor: "#000000",
+            baseColor: "#000000",
+            centerColor: "#000000",
+            centerBorderColor: "#ffffff",
+            handColors: {
+              second: "#ff1900",
+              minute: "#ffffff",
+              hour: "#fafafa"
+            
+          }
+    }
 
     if (!themeLoaded) {
         return null;
@@ -91,7 +98,7 @@ export default function Navbar() {
                     <Offcanvas.Title>Offcanvas</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
-                {/* <AnalogClock {...options} /> */}
+                <AnalogClock {...options} />
                 </Offcanvas.Body>
             </Offcanvas>
 
