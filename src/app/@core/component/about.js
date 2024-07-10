@@ -40,7 +40,9 @@ export default function About() {
                         <button className="main-btn bg-red white fs-lgg fw-500 d-flex justify-content-center  align-items-center gap-2" onClick={()=>{
                             handleOpenDailog()
                         }}><Icon icon="hugeicons:job-link" /> Hire me</button>
-                        <button className="main-btn-outlined white fs-lgg fw-500 d-flex justify-content-center  align-items-center gap-2"><Icon icon="line-md:email" /> Mail </button>
+                        <button className="main-btn-outlined white fs-lgg fw-500 d-flex justify-content-center  align-items-center gap-2" onClick={()=>{
+                            window.location = "mailto:kumawatji7113@gmail.com";
+                        }}><Icon icon="line-md:email" /> Mail </button>
 
                     </div>
                 </div>

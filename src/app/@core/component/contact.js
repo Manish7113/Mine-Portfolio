@@ -87,7 +87,6 @@ export default function Contact() {
         );
 
 
-        // notify('success', 'Thank You For Being Connected')
 
 
     }
