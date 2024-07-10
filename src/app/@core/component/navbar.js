@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import AnalogClock from 'analog-clock-react';
-import { Button } from '@mui/material'
+import { Button, Tooltip} from '@mui/material'
 import { useRouter } from 'next/navigation'
 
 
@@ -69,30 +69,35 @@ export default function Navbar() {
         {
             icon : 'skill-icons:instagram',
             handleClick : ()=>{
-            //    router.push('https://www.instagram.com/kumawatmanish7125/?next=%2F')
+           
                window.open('https://www.instagram.com/kumawatmanish7125/?next=%2F')
-            }
+            },
+            title : 'Instagram'
+            
         },
         {
             icon : 'skill-icons:git',
             handleClick : ()=>{
-                // router.push('https://github.com/Manish7113', '_blank')
+                
                 window.open('https://github.com/Manish7113')
-            }
+            },
+            title : 'Git Hub'
         },
         {
             icon : 'skill-icons:linkedin',
             handleClick : ()=>{
                 // router.push('https://www.linkedin.com/in/manish-kumawat-ab15b823a/')
                 window.open('https://www.linkedin.com/in/manish-kumawat-ab15b823a/')
-            }
+            },
+            title : 'Linked In'
         },
         {
             icon : 'skill-icons:gmail-dark',
             handleClick : ()=>{
                 router.push('mailto:kumawatji7113@gmail.com')
                 
-            }
+            },
+            title : 'Mail'
         }
     ]
 
@@ -109,21 +114,28 @@ export default function Navbar() {
 
                     <div className='mb-1'>
                         {
-                            mode === 'light' ? <button onClick={() => {
+                            mode === 'light' ? <Tooltip  title={'Dark'}>
+                                 <button onClick={() => {
                                 handleMode('dark')
                             }} >
                                 <Icon icon="ph:moon-bold" className='m-0 p-0 ' />
-                            </button> : <button onClick={() => {
+                            </button>
+
+                            </Tooltip> :   <Tooltip  title={'Light'}><button onClick={() => {
                                 handleMode('light')
                             }} >
                                 <Icon icon="uil:sun" className='m-0 p-0 ' />
-                            </button>
+                            </button></Tooltip>
                         }
                     </div>
+
+                    <Tooltip  title={'Know More'}>
 
                     <Icon icon="icon-park-outline:hamburger-button" className='m-0 p-0 fs-xll ' onClick={() => {
                         setShowSideBar(true)
                     }} />
+
+                    </Tooltip>
 
                 </div>
 
@@ -159,10 +171,12 @@ export default function Navbar() {
                                 {
                                     socialMediaHandlers.map((item, index)=>{
                                         return(
-                                            <div key={index} onClick={item?.handleClick} className='socialContainer d-flex justify-content-center align-items-center'>
+                                            <Tooltip key={index} title={item?.title}>
+                                            <div  onClick={item?.handleClick} className='socialContainer d-flex justify-content-center align-items-center'>
                                             <Icon icon={item?.icon} />
             
                                             </div>
+                                            </Tooltip>
 
                                         )
                                     })
