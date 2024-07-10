@@ -141,10 +141,14 @@ export default function Navbar() {
                         
                         <div className='d-flex justify-content-center align-items-center gap-3 mt-3'>
                             
-                            <Button variant='contained' color='warning' className='px-4 sideBarButton' >
+                            <Button variant='contained' color='warning' className='px-4 sideBarButton' onClick={()=>{
+                                window.open('https://drive.google.com/file/d/1kifuVPzdu8zcLvqNFsL80MYi25PjjQSo/view?usp=drivesdk')
+                            }} >
                                Resume
                             </Button>
-                            <Button variant='outlined' color='secondary' className='px-4 sideBarButton'>
+                            <Button variant='outlined' color='secondary' className='px-4 sideBarButton' onClick={()=>{
+                                window.open('https://drive.google.com/file/d/1knewNKs9sTKoUfHePzbaeRSO8g9A_wZO/view?usp=drivesdk ')
+                            }}>
                                Cover Letter
                             </Button>
                         </div>
