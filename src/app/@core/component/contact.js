@@ -114,7 +114,7 @@ export default function Contact() {
 
                 </div> : <div className="d-flex flex-column justify-conent-center align-items-center p-5 gap-3">
                     <div>
-                        <p className='m-0 p-0 mb-3 fs-lgg fw-500 '>Enter your details and I will get back to you soon </p>
+                        <p className='m-0 p-0 mb-3 fs-lgg fw-500 '>Enter your details and I will get back to you soon !</p>
                     </div>
                     <form autoComplete='off' onSubmit={handleSubmit(OnSubmit)} className='w-100' >
                         <Grid container spacing={4}>
