@@ -1,3 +1,4 @@
+'use client'
 import * as React from 'react';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -5,44 +6,38 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import { Slide, Grid } from '@mui/material';
-import { TransitionProps } from '@mui/material/transitions';
 import { Icon } from '@iconify/react';
-
-
-
 import { TextField, FormControl, Button, Typography, Select, MenuItem, InputLabel } from '@mui/material';
 import { useForm, Controller } from "react-hook-form"
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
-
 import emailjs from '@emailjs/browser';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 
 
-
-
-const Transition = React.forwardRef((props, ref) => {
-    return <Slide direction="up" ref={ref} {...props} />;
-});
-
-
-
-const notify = (type, text) => {
-    toast.dismiss();
-    switch (type) {
-        case 'success':
-            toast.success(text);
-            break;
-        case 'error':
-            toast.error(text);
-            break;
-        default:
-            // You can either do something here for default case or just break
-            break;
-    }
-};
 
 export default function HireDailog({ isOpen, toggle, formSubmitted, formIsSubmitted }) {
+
+    // const Transition = React.forwardRef(function(props, ref){
+    //     return <Slide direction="up" ref={ref} {...props} />;
+    // });
+    
+    
+    
+    function notify(type, text) {
+        toast.dismiss();
+        switch (type) {
+            case 'success':
+                toast.success(text);
+                break;
+            case 'error':
+                toast.error(text);
+                break;
+            default:
+                // You can either do something here for default case or just break
+                break;
+        }
+    };
 
 
 
@@ -105,7 +100,7 @@ export default function HireDailog({ isOpen, toggle, formSubmitted, formIsSubmit
 
             <Dialog
                 open={isOpen}
-                TransitionComponent={Transition}
+                // TransitionComponent={Transition}
                 keepMounted
                 onClose={handleClose}
                 aria-describedby="alert-dialog-slide-description"

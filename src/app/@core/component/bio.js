@@ -1,3 +1,4 @@
+'use client'
 export default function Bio() {
     return (
         <div className="container d-flex align-items-center bioContainer p-2">
