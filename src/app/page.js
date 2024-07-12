@@ -9,7 +9,7 @@ import Project from "./@core/component/project";
 import Skill from "./@core/component/skills";
 import Bio from "./@core/component/bio";
 import ProgressBar from "react-scroll-progress-bar";
-import AlertDialogSlide from "./@core/component/example";
+import Loading from "./@core/component/loading";
 
 export default function Home() {
 
@@ -22,7 +22,7 @@ export default function Home() {
 
     <>
 
-      {isLoading ? <p>It is loading</p> : <> <Navbar></Navbar>
+      {isLoading ? <Loading></Loading> : <> <Navbar></Navbar>
         <ProgressBar height="6" bgcolor="#ff084a" duration="0.2" />
         
         <About></About>
@@ -30,7 +30,6 @@ export default function Home() {
         <Skill></Skill>
         <Project></Project> 
         <Experience></Experience>
-
         <Contact></Contact>
         <Footer></Footer></>}
 

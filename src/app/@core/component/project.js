@@ -1,8 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { ProjectCardOne, ProjectCardTwo, ProjectCardThree } from '../subComponent/projectCard'
-import ProjectCardTwoMain from '../subComponent/projectCardTwo'
+
+import {ProjectCardTwoMain, ProjectCardTwo} from '../subComponent/projectCardTwo'
 
 import { useRouter } from 'next/navigation'
 
@@ -11,25 +11,25 @@ export default function Project() {
 
 
 
-    const [activeTab, setActiveTab]= useState('html')
+    const [activeTab, setActiveTab]= useState('js')
 
     const tabs = [
-        {
-            value: 'html',
-            label: 'HTML'
-        },
-        {
-            value: 'css',
-            label: 'CSS - 3'
-        },
+        // {
+        //     value: 'html',
+        //     label: 'HTML'
+        // },
+        // {
+        //     value: 'css',
+        //     label: 'CSS - 3'
+        // },
         {
             value: 'js',
             label: 'JavaScript'
         },
-        {
-            value: 'react',
-            label: 'React'
-        },
+        // {
+        //     value: 'react',
+        //     label: 'React'
+        // },
     ]
     return (
         <div className="container projectSection mb-5">
@@ -48,18 +48,16 @@ export default function Project() {
             </div>
             <div className='d-flex justify-content-center align-items-center flex-wrap gap-3'>
                 <ProjectCardTwoMain></ProjectCardTwoMain>
-                <ProjectCardTwoMain></ProjectCardTwoMain>
-                <ProjectCardTwoMain></ProjectCardTwoMain>
-                {/* <ProjectCardOne></ProjectCardOne>
                 <ProjectCardTwo></ProjectCardTwo>
-                <ProjectCardThree></ProjectCardThree> */}
+                {/* <ProjectCardTwoMain></ProjectCardTwoMain> */}
+               
             </div>
 
-            <div className="container pb-3 d-flex justify-content-center align-items-center pt-5">
+            {/* <div className="container pb-3 d-flex justify-content-center align-items-center pt-5">
                     <button className="showMoreButton" onClick={()=>{
                         router.push('/[radhe]')
                     }} >View More</button>
-                </div>
+                </div> */}
 
 
 

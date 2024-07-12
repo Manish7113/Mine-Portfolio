@@ -1,20 +1,23 @@
 // @import './fontStyle.scss';
 
 :root {
-    --bgColor: rgb(228, 228, 228);
-    --bglight : #dad9d9;
-    --color: #000000;
+    --bgColor: #212121;
+    --color: #fff;
+
+    --bglight: #353434;
+
+
+
     --red: #ff084a;
     --white: #ffffff;
     --black: #000000;
 
 }
 
-[theme="dark"] {
-    --bgColor: #212121;
-    --color: #fff;
-    
-    --bglight : #353434;
+[theme="light"] {
+    --bgColor: rgb(228, 228, 228);
+    --bglight: #dad9d9;
+    --color: #000000;
 }
 
 * {
@@ -150,7 +153,7 @@ body {
     text-align: center;
 }
 
-.capitalize{
+.capitalize {
     text-transform: capitalize;
 }
 
@@ -348,12 +351,12 @@ body {
     border-radius: 10px;
     font-weight: 500;
 
-   
+
 }
 
 .activeTab {
     border: 2px solid var(--red);
-   
+
 }
 
 
@@ -383,32 +386,36 @@ body {
     width: 250px;
     height: 100px;
     background-color: var(--bgColor);
-    .icon{
-     font-size: 5rem;
-     border: 1px solid var(--color);
-     padding: 10px;
-     border-radius: 50%;
-     transition: all .2s ease;
+
+    .icon {
+        font-size: 5rem;
+        border: 1px solid var(--color);
+        padding: 10px;
+        border-radius: 50%;
+        transition: all .2s ease;
     }
-    .icon:hover{
+
+    .icon:hover {
         // font-size: 5.5rem;
         scale: 1.1;
     }
-    .heading{
+
+    .heading {
         padding: 0px;
         margin: 0px;
-        font-size:1.5rem;
+        font-size: 1.5rem;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: 500;
     }
-    .experience{
+
+    .experience {
         padding: 0px;
         margin: 0px;
     }
-   
+
 }
 
-.showMoreButton{
+.showMoreButton {
     width: 180px;
     padding: 8px;
     background-color: var(--red);
@@ -417,31 +424,34 @@ body {
     color: white;
     border: none;
 
-    
+
     cursor: pointer;
-    
+
 
 }
 
 
 // experience 
 
-.exTextContainer{
+.exTextContainer {
     width: fit-content;
     max-width: 550px;
 }
-.border-bottom{
-  border: 2px solid green;
+
+.border-bottom {
+    border: 2px solid green;
 }
 
 // footer 
-.nm-1{
+.nm-1 {
     margin-top: -10px;
 }
-.nm-3{
+
+.nm-3 {
     margin-top: -25px;
 }
-.footerIconConatiner{
+
+.footerIconConatiner {
     width: 50px;
     height: 50px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -449,22 +459,23 @@ body {
     cursor: pointer;
     border: none;
 
-   
+
 }
-.footerIconConatiner:hover{
+
+.footerIconConatiner:hover {
     color: var(--red);
 }
 
 
 /// conatct page 
 
-.contactMessage{
+.contactMessage {
     width: 100%;
     height: 70vh;
 }
 
 
-.checkCircle{
+.checkCircle {
     width: 200px;
     height: 200px;
     // border: 2px solid white;
@@ -474,32 +485,36 @@ body {
 }
 
 @keyframes circleFormAnimation {
-    0%{
+    0% {
         border: none;
     }
-    25%{
+
+    25% {
         border-left: 2px solid var(--red);
     }
-    50%{
+
+    50% {
         border-left: 2px solid var(--red);
         border-bottom: 2px solid var(--red);
     }
-    75%{
+
+    75% {
         border-left: 2px solid var(--red);
         border-bottom: 2px solid var(--red);
         border-right: 2px solid var(--red);
     }
-    100%{
+
+    100% {
         border-left: 2px solid var(--red);
         border-bottom: 2px solid var(--red);
         border-right: 2px solid var(--red);
         border-top: 2px solid var(--red);
     }
-    
+
 }
 
 
-.closeButton{
+.closeButton {
     background-color: transparent;
     color: var(--red);
 }
@@ -510,26 +525,27 @@ body {
 // project card container
 
 
-.ProjectCardContainer{
+.ProjectCardContainer {
     width: 300px;
     background-color: var(--bglight);
 }
 
-.projectImage{
+.projectImage {
     width: 100%;
     height: 200px;
 }
 
-.sideBar{
+.sideBar {
     background-color: var(--bglight);
     color: var(--color);
 
-    .sideBarButton{
-       width: 100%;
-       height: 45px;
-       font-size: .9rem;
+    .sideBarButton {
+        width: 100%;
+        height: 45px;
+        font-size: .9rem;
     }
-    .socialContainer{
+
+    .socialContainer {
         width: 70px;
         height: 70px;
         background-color: var(--bgColor);
@@ -537,9 +553,76 @@ body {
         font-size: 2rem;
         cursor: pointer;
     }
-    .line{
+
+    .line {
         width: 60%;
         height: 1px;
         border-top: solid 1px var(--color);
+    }
+}
+
+
+
+/// loading container 
+.loadingContainer {
+    width: 100%;
+    height: 100vh;
+
+    .box {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        -ms-align-items: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        // border-radius: 20px;
+        overflow: hidden;
+        transform: rotate(45deg);
+    }
+
+    .box::before {
+        content: '';
+        position: absolute;
+        width: 85px;
+        height: 140%;
+        background: linear-gradient(#00ccff, #d500f9);
+        transform: rotate(45deg);
+        animation: rotate 2s linear infinite;
+    }
+
+    // .box:hover::before {
+    //     animation: rotate 1s linear infinite;
+    //     /* Animation triggered on hover */
+    // }
+
+    .box::after {
+        content: '';
+        position: absolute;
+        // background: #0e1538;
+        background-color: var(--bgColor);
+        inset: 5px;
+        // border-radius: 16px;
+    }
+
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(45deg);
+        }
+
+        to {
+            transform: rotate(225deg);
+        }
+
+    }
+
+    .loadingText{
+        z-index: 2;
+        transform: rotate(-45deg);
+        font-size: 1.2rem;
+        font-weight: 500;
+        // margin-left: -20px;
     }
 }

@@ -1,6 +1,6 @@
 'use client'
 import { Icon } from '@iconify/react';
-import Link from 'next/link';
+
 import { useEffect, useState } from 'react';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import AnalogClock from 'analog-clock-react';
@@ -16,7 +16,7 @@ export default function Navbar() {
     const [showSideBar, setShowSideBar] = useState(false)
 
 
-    const [mode, setMode] = useState('light')
+    const [mode, setMode] = useState('dark')
     useEffect(() => {
         const theme = localStorage.getItem('theme')
         if (theme) {
@@ -28,7 +28,7 @@ export default function Navbar() {
         setThemeLoaded(true);
 
     }, [])
-    const handleMode = (mode = 'light') => {
+    const handleMode = (mode = 'dark') => {
         setMode(mode)
         document.querySelector('body').setAttribute('theme', mode);
         localStorage.setItem('theme', mode)
