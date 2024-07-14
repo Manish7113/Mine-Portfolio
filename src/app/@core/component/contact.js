@@ -112,7 +112,7 @@ export default function Contact() {
                         <p className='fs-smm fw-500 p-0 m-0 txt-center'>You have already sent a message earlier</p>
                     </div>
 
-                </div> : <div className="d-flex flex-column justify-conent-center align-items-center p-5 gap-3">
+                </div> : <div className="d-flex flex-column justify-conent-center align-items-center pt-5 pb-5 p-2 gap-3">
                     <div>
                         <p className='m-0 p-0 mb-3 fs-lgg fw-500 '>Enter your details and I will get back to you soon !</p>
                     </div>
