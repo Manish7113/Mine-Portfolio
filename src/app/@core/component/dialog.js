@@ -61,7 +61,7 @@ export default function HireDailog({ isOpen, toggle, formSubmitted, formIsSubmit
     const OnSubmit = (values) => {
      
 
-        localStorage?.setItem('hireme', true)
+      
 
         const templateParams = {
             name: values?.name,
@@ -78,6 +78,7 @@ export default function HireDailog({ isOpen, toggle, formSubmitted, formIsSubmit
                 formIsSubmitted()
                 notify('success', 'Thank You For Being Connected')
                 setTimeout(handleClose, 2000)
+                localStorage?.setItem('hireme', true)
             },
             (error) => {
                 notify('error', 'Something went wrong')
