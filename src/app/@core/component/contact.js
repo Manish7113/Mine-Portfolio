@@ -61,9 +61,9 @@ export default function Contact() {
         // mode: onchange(),
 
     })
-    const OnSubmit = (values) => {
+    const OnSubmit = async(values) => {
 
-        localStorage?.setItem('messageSent', true)
+        
 
         const templateParams = {
             name: values?.name,
@@ -75,11 +75,12 @@ export default function Contact() {
         };
 
 
-        emailjs.send(process.env.serviceID, process.env.templateID, templateParams, process.env.publicKey,).then(
+        await emailjs.send(process.env.serviceID, process.env.templateID, templateParams, process.env.publicKey,).then(
             (response) => {
                 console.log('SUCCESS!', response.status, response.text);
                 setFormSubmitted(true)
                 notify('success', 'Thank You For Being Connected')
+                localStorage?.setItem('messageSent', true)
             },
             (error) => {
                 notify('error', 'Something went wrong')
