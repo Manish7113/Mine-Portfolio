@@ -71,9 +71,7 @@ export default function HireDailog({ isOpen, toggle, formSubmitted, formIsSubmit
             message: values?.message,
         };
 
-          console.log(process.env.serviceID, 'service id ')
-          console.log(process.env.templateID, 'template id')
-          console.log(process.env.publicKey, 'publick key')
+         
           
         emailjs.send(process.env.serviceID, process.env.templateID, templateParams, process.env.publicKey,).then(
             (response) => {
@@ -85,6 +83,9 @@ export default function HireDailog({ isOpen, toggle, formSubmitted, formIsSubmit
             },
             (error) => {
                 console.log(error , '---------------------------------')
+                console.log(process.env.serviceID, 'service id ')
+                console.log(process.env.templateID, 'template id')
+                console.log(process.env.publicKey, 'publick key')
                 notify('error', 'Something went wrong')
             },
         );
