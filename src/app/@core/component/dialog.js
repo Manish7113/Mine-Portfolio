@@ -81,6 +81,7 @@ export default function HireDailog({ isOpen, toggle, formSubmitted, formIsSubmit
                 localStorage?.setItem('hireme', true)
             },
             (error) => {
+                console.log(error , '---------------------------------')
                 notify('error', 'Something went wrong')
             },
         );
