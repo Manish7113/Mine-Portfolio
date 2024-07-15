@@ -21,7 +21,7 @@ export default function Navbar() {
         const theme = localStorage.getItem('theme')
         if (theme) {
             document.querySelector('body').setAttribute('theme', theme);
-            console.log(theme)
+            // console.log(theme)
             setMode(theme)
 
         }

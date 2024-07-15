@@ -77,7 +77,7 @@ export default function Contact() {
 
         await emailjs.send(process.env.serviceID, process.env.templateID, templateParams, process.env.publicKey,).then(
             (response) => {
-                console.log('SUCCESS!', response.status, response.text);
+                // console.log('SUCCESS!', response.status, response.text);
                 setFormSubmitted(true)
                 notify('success', 'Thank You For Being Connected')
                 localStorage?.setItem('messageSent', true)
@@ -197,9 +197,9 @@ export default function Contact() {
 
                                 </Button>
                                 <Button size='large' variant='outlined' color='secondary' onClick={() => {
-                                    console.log(
-                                        ''
-                                    )
+                                    // console.log(
+                                    //     ''
+                                    // )
                                 }} >
                                     Cancel
 

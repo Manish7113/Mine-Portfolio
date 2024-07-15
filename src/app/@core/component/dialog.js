@@ -75,14 +75,14 @@ export default function HireDailog({ isOpen, toggle, formSubmitted, formIsSubmit
           
         emailjs.send(process.env.serviceID, process.env.templateID, templateParams, process.env.publicKey,).then(
             (response) => {
-                console.log('SUCCESS!', response.status, response.text);
+                // console.log('SUCCESS!', response.status, response.text);
                 formIsSubmitted()
                 notify('success', 'Thank You For Being Connected')
                 setTimeout(handleClose, 2000)
                 localStorage?.setItem('hireme', true)
             },
             (error) => {
-                console.log(error , '---------------------------------')
+                // console.log(error , '---------------------------------')
               
                 notify('error', 'Something went wrong')
             },
