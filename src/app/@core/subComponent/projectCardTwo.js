@@ -4,6 +4,7 @@ import Image from 'next/image'
 
 import ProjectOne from '../../../assets/projectOne.jpg'
 import ProjectTwo from '../../../assets/projectTwo.jpg'
+import weatherImage from '../../../assets/weather.png'
 
 import { Button } from '@mui/material'
 
@@ -58,5 +59,31 @@ function ProjectCardTwo() {
         </div>
     )
 }
+function WeatherProject() {
+    return (
+        <div className="ProjectCardContainer">
+            <Image src={weatherImage} className=' projectImage' width={100} height={100} alt='image not found' ></Image>
+            <div className='d-flex flex-column justify-content-start aling-items-start p-3'>
+                <p className='fs-lgg fw-500 roboto-regular p-0 m-0 pb-1'>Weather App</p>
+                <p className='fs-mdd fw-500'> You can search current weather by city over the world wide. It shows you Temprature, could humidity and wind 
+                </p>
+                <div className='d-flex justify-content-start align-items-center gap-2 mt-2'>
+                    <Button variant='outlined' color='secondary' className='px-4'onClick={()=>{
+                        window.open('https://manish7113.github.io/weatherapp/')
+                    }} >
+                        View
+                    </Button>
+                    <Button variant='contained' color='warning' className='px-4' onClick={()=>{
+                        window.open('https://github.com/Manish7113/weatherapp')
+                    }}>
+                        Code
+                    </Button>
+                </div>
 
-export { ProjectCardTwoMain, ProjectCardTwo }
+            </div>
+
+        </div>
+    )
+}
+
+export { ProjectCardTwoMain, ProjectCardTwo,WeatherProject }

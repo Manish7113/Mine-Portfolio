@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-import {ProjectCardTwoMain, ProjectCardTwo} from '../subComponent/projectCardTwo'
+import {ProjectCardTwoMain, ProjectCardTwo, WeatherProject} from '../subComponent/projectCardTwo'
 
 import { useRouter } from 'next/navigation'
 
@@ -24,7 +24,7 @@ export default function Project() {
         // },
         {
             value: 'js',
-            label: 'JavaScript'
+            label: 'All'
         },
         // {
         //     value: 'react',
@@ -49,6 +49,7 @@ export default function Project() {
             <div className='d-flex justify-content-center align-items-center flex-wrap gap-3'>
                 <ProjectCardTwoMain></ProjectCardTwoMain>
                 <ProjectCardTwo></ProjectCardTwo>
+                <WeatherProject></WeatherProject>
                 {/* <ProjectCardTwoMain></ProjectCardTwoMain> */}
                
             </div>
