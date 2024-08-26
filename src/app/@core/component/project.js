@@ -47,9 +47,9 @@ export default function Project() {
 
             </div>
             <div className='d-flex justify-content-center align-items-center flex-wrap gap-3'>
+                <WeatherProject></WeatherProject>
                 <ProjectCardTwoMain></ProjectCardTwoMain>
                 <ProjectCardTwo></ProjectCardTwo>
-                <WeatherProject></WeatherProject>
                 {/* <ProjectCardTwoMain></ProjectCardTwoMain> */}
                
             </div>

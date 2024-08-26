@@ -12,21 +12,7 @@ export default function Skill() {
 
 
     const skills = [
-        {
-            icon: 'nonicons:html-16',
-            heading: "HTML",
-            description: 'Ex: 1 Year'
-        },
-        {
-            icon: 'streamline:css-three',
-            heading: "CSS",
-            description: 'Ex: 1 Year'
-        },
-        {
-            icon: 'ri:javascript-line',
-            heading: "Javascript",
-            description: 'Ex: 1 Year'
-        },
+       
         {
             icon: 'grommet-icons:reactjs',
             heading: "React JS",
@@ -37,6 +23,22 @@ export default function Skill() {
             heading: "Next JS",
             description: 'Ex: 1 Year'
         },
+        {
+            icon: 'ri:javascript-line',
+            heading: "Javascript",
+            description: 'Ex: 1 Year'
+        },
+        {
+            icon: 'nonicons:html-16',
+            heading: "HTML",
+            description: 'Ex: 1 Year'
+        },
+        {
+            icon: 'streamline:css-three',
+            heading: "CSS",
+            description: 'Ex: 1 Year'
+        },
+       
         {
             icon: "bi:bootstrap",
             heading: "Bootstrap",

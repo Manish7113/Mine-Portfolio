@@ -110,7 +110,7 @@ export default function Contact() {
                     </div>
                     <div className='d-flex justify-content-center align-items-center flex-column gap-0'>
                         <p className='fs-lgg fw-500 p-0 m-0 txt-center capitalize'>Thank you for being connected </p>
-                        <p className='fs-smm fw-500 p-0 m-0 txt-center'>You have already sent a message earlier</p>
+                        <p className='fs-smm fw-500 p-0 m-0 txt-center'>I will get back to you soon !</p>
                     </div>
 
                 </div> : <div className="d-flex flex-column justify-conent-center align-items-center pt-5 pb-5 p-2 gap-3">

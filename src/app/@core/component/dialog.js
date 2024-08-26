@@ -111,7 +111,7 @@ export default function HireDailog({ isOpen, toggle, formSubmitted, formIsSubmit
             >
                 <Grid container spacing={0}>
                     <Grid item xs={11} sm={11} lg={11} xl={11}>
-                        <DialogTitle>{"Hire me by fill the form "}</DialogTitle>
+                        <DialogTitle>{formSubmitted ? 'Stay In Touch':"Hire me by fill the form "}</DialogTitle>
 
                     </Grid>
                     <Grid item xs={1} sm={1} lg={1} xl={1} className='d-flex justify-content-center align-items-start pt-2'>
@@ -129,7 +129,7 @@ export default function HireDailog({ isOpen, toggle, formSubmitted, formIsSubmit
                         </div>
                         <div className='d-flex justify-content-center align-items-center flex-column gap-0'>
                             <p className='fs-lgg fw-500 p-0 m-0 txt-center capitalize px-2'>Thank you, I will get back to you soon</p>
-                            <p className='fs-smm fw-500 p-0 m-0 txt-center'>You have already fill the form  earlier</p>
+                            <p className='fs-smm fw-500 p-0 m-0 txt-center'>Please Wait</p>
                         </div>
 
                     </div> : <form autoComplete='off' onSubmit={handleSubmit(OnSubmit)} className='w-100' >
